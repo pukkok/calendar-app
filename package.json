@@ -5,10 +5,11 @@
   "repository": "https://github.com/pukkok/calendar-app.git",
   "author": "pukkok <krystalgggg@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
-    "electron": "^33.2.1"
-  },
+  "type": "module",
   "scripts": {
     "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^33.2.1"
   }
 }
