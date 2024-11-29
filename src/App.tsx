@@ -1,6 +1,8 @@
+import Calendar from "./calendar/Calendar"
+
 const App = () => {
   return (
-    <h1>타입스크립트 동작 확인</h1>
+    <Calendar />
   )
 }
 
