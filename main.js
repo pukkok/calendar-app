@@ -1,10 +1,5 @@
-import { app, BrowserWindow } from 'electron'
-import path from 'path'
-import { fileURLToPath } from 'url'
-
-// __dirname 대체
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
+const { app, BrowserWindow } = require('electron')
+const path = require('path')
 
 // 재사용 가능한 기능을 작성하여 창을 인스턴스화하기
 const createWindow = () => {

@@ -1,5 +1,4 @@
-import { contextBridge } from 'electron'
-
+const {contextBridge} = require('electron')
 // 먼저 읽어야 할 파일들 설정
 // window.versions 객체 생성
 contextBridge.exposeInMainWorld('versions', {
