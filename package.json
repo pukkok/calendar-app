@@ -1,7 +1,7 @@
 {
   "name": "calendar-app",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
   "repository": "https://github.com/pukkok/calendar-app.git",
   "author": "pukkok <krystalgggg@gmail.com>",
   "license": "MIT",
