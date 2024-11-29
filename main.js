@@ -13,6 +13,11 @@ const createWindow = () => {
 // 앱이 준비되면 기능 호출
 app.whenReady().then(() => {
 	createWindow()
+
+	// macOS 앱은 일반적으로 창이 열리지 않더라도 계속 실행됨 => 문제 해결
+	app.on('activate', () => {
+    if (BrowserWindow.getAllWindows().length === 0) createWindow()
+  })
 })
 
 // 모든 창이 닫히면 앱 종료(Windows 및 Linux)
