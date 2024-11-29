@@ -1,10 +1,18 @@
 import { app, BrowserWindow } from 'electron'
+import path from 'path'
+
+// __dirname 대체
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 // 재사용 가능한 기능을 작성하여 창을 인스턴스화하기
 const createWindow = () => {
 	const win = new BrowserWindow({
 		width: 800,
-		height: 600
+		height: 600,
+		webPreferences: {
+      preload: path.join(__dirname, 'preload.js')
+    }
 	})
 
 	win.loadFile('index.html')
