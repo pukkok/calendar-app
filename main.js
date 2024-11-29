@@ -1,5 +1,6 @@
 import { app, BrowserWindow } from 'electron'
 import path from 'path'
+import { fileURLToPath } from 'url'
 
 // __dirname 대체
 const __filename = fileURLToPath(import.meta.url)
