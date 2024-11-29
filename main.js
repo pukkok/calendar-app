@@ -11,7 +11,7 @@ const createWindow = () => {
     }
 	})
 
-	win.loadFile('http://localhost:3000')
+	win.loadURL('http://localhost:3000')
 }
 
 // 앱이 준비되면 기능 호출
