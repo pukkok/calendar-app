@@ -8,11 +8,11 @@ class EnhancedDate {
     hours? : number,
     minutes? : number
   ) {
-    if(!year) this._date = new Date()
-    else if(!month) this._date = new Date(year)
-    else if(!day) this._date = new Date(year, month-1) 
-    else if(!hours) this._date = new Date(year, month-1, day)
-    else if(!minutes) this._date = new Date(year, month-1, day, hours)
+    if(year === undefined) this._date = new Date()
+    else if(month === undefined) this._date = new Date(year)
+    else if(day === undefined) this._date = new Date(year, month-1) 
+    else if(hours === undefined) this._date = new Date(year, month-1, day)
+    else if(minutes === undefined) this._date = new Date(year, month-1, day, hours)
     else this._date = new Date(year, month - 1, day, hours, minutes) 
   }
 
