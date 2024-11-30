@@ -1,10 +1,9 @@
-import EnhancedDate from "./lib/EnhancedDate"
+import FlexiDate from "./lib/FlexiDate"
 
 const Calendar = () => {
 
-  const today = new EnhancedDate()
-  console.log(today.date)
-  const day = new Date(24, 11, 1)
+  const today = new FlexiDate()
+  console.log(today.format('YYYY-MM-DD hh:mm'))
 
   return (
     <>달력 만들기</>
