@@ -35,7 +35,7 @@ class EnhancedDate {
     return this._date.getDay()
   }
   get month () : number {
-    return this._date.getMonth()
+    return this._date.getMonth() + 1
   }
   get year () : number {
     return this._date.getFullYear()
