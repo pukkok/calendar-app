@@ -1,3 +1,4 @@
+import week from "../constants/week"
 import EnhancedDate from "./EnhancedDate"
 
 class FlexiDate extends EnhancedDate {
@@ -14,6 +15,11 @@ class FlexiDate extends EnhancedDate {
     .replace('DD', date)
     .replace('hh', hours)
     .replace('mm', minutes)
+  }
+
+  // 요일을 리턴한다. default는 한국어다.
+  weekDay (locale : "ko" | "en" = "ko" ) : string {
+    return week[locale][this.day]
   }
 }
 
