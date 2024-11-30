@@ -21,6 +21,14 @@ class FlexiDate extends EnhancedDate {
   weekDay (locale : "ko" | "en" = "ko" ) : string {
     return week[locale][this.day]
   }
+
+  get startWeekIndex () : number { // 시작하는 요일의 index
+    return new EnhancedDate(this.year, this.month, 1).day
+  }
+
+  get totalMonthInDays () : number { // 총 한달간의 일수
+    return new EnhancedDate(this.year, this.month, 0).date
+  }
 }
 
 export default FlexiDate
