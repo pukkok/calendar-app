@@ -1,6 +1,6 @@
 import HeadLine from "./header/HeadLine"
 import NavigateButton from "./header/NavigateButton"
-
+import './header/styles/Header.css'
 
 const Header = () => {
 
