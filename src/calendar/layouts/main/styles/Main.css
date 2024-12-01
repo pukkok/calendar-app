@@ -1,0 +1,8 @@
+.week-box{
+  display: flex;
+}
+
+.week-box p {
+  padding: 10px;
+  border: solid 1px black;
+}
