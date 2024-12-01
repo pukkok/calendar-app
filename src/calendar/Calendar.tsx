@@ -10,21 +10,19 @@ const Calendar = () => {
 
   const today = new FlexiDate(2024, 11, 1)
 
-  const [currentDate, setCurrentDate] = useState(today)
-  const [test, setTest] = useState<number>(1)
+  const [currentDate, setCurrentDate] = useState<FlexiDate>(today)
+  
   const startWeekIndex = currentDate.startWeekIndex
   const totalDays = currentDate.totalMonthInDays
   
-  const currentDateFormat = currentDate.format('YYYY년 MM월 DD일') 
+  const currentDateFormat = currentDate.format('YYYY년 MM월') 
   const flattenArr = makeFlatMonthArray(startWeekIndex, totalDays)
   const monthArray = makeArrayDevidedByWeek(flattenArr)
-
-  console.log(test)
 
   return (
     <section>
       <Header 
-      handleNavigateMonth={setTest} 
+      handleNavigateMonth={setCurrentDate} 
       headline={currentDateFormat}/>
       <Main monthArray={monthArray}/>
       <Footer/>
