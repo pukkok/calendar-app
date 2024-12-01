@@ -1,5 +1,6 @@
 import { useState } from "react"
 import FlexiDate from "./lib/FlexiDate"
+import makeFlatMonthArray from "./utils/makeFlatMonthArray"
 
 const Calendar = () => {
 
@@ -12,11 +13,11 @@ const Calendar = () => {
   console.log(totalDays)
   console.log(startWeekIndex)
   
-  const flatArr = Array(startWeekIndex + totalDays)
-  .fill(false) // 요일 시작일 맞추기
-  .fill(true, startWeekIndex, startWeekIndex + totalDays) // 나머지 1로 채우기
+  const flatArr = makeFlatMonthArray(startWeekIndex, totalDays)
 
   console.log(flatArr)
+
+
 
   return (
     <>달력 만들기</>
