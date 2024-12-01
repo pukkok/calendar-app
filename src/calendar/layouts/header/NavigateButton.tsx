@@ -1,6 +1,6 @@
-const NavigateButton = () => {
+const NavigateButton = ({children, handleClick} : any) => {
 
-  return <button>무브버튼</button>
+  return <button onClick={handleClick}>{children}</button>
 }
 
 export default NavigateButton
