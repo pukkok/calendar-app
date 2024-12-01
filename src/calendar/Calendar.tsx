@@ -8,7 +8,7 @@ import Footer from "./layouts/Footer"
 
 const Calendar = () => {
 
-  const today = new FlexiDate(2024, 11, 1)
+  const today = new FlexiDate()
 
   const [currentDate, setCurrentDate] = useState<FlexiDate>(today)
   
