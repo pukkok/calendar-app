@@ -12,6 +12,11 @@ const Calendar = () => {
   console.log(totalDays)
   console.log(startWeekIndex)
   
+  const flatArr = Array(startWeekIndex + totalDays)
+  .fill(false) // 요일 시작일 맞추기
+  .fill(true, startWeekIndex, startWeekIndex + totalDays) // 나머지 1로 채우기
+
+  console.log(flatArr)
 
   return (
     <>달력 만들기</>
