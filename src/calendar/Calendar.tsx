@@ -11,6 +11,7 @@ const Calendar = () => {
   const today = new FlexiDate(2024, 11, 1)
 
   const [currentDate, setCurrentDate] = useState(today)
+  const [test, setTest] = useState<number>(1)
   const startWeekIndex = currentDate.startWeekIndex
   const totalDays = currentDate.totalMonthInDays
   
@@ -18,9 +19,13 @@ const Calendar = () => {
   const flattenArr = makeFlatMonthArray(startWeekIndex, totalDays)
   const monthArray = makeArrayDevidedByWeek(flattenArr)
 
+  console.log(test)
+
   return (
     <section>
-      <Header headline={currentDateFormat}/>
+      <Header 
+      handleNavigateMonth={setTest} 
+      headline={currentDateFormat}/>
       <Main monthArray={monthArray}/>
       <Footer/>
     </section>
