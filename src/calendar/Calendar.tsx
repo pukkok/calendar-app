@@ -1,6 +1,7 @@
 import { useState } from "react"
 import FlexiDate from "./lib/FlexiDate"
 import makeFlatMonthArray from "./utils/makeFlatMonthArray"
+import makeArrayDevidedByWeek from "./utils/makeArrayDevidedByWeek"
 
 const Calendar = () => {
 
@@ -13,9 +14,8 @@ const Calendar = () => {
   console.log(totalDays)
   console.log(startWeekIndex)
   
-  const flatArr = makeFlatMonthArray(startWeekIndex, totalDays)
-
-  console.log(flatArr)
+  const flattenArr = makeFlatMonthArray(startWeekIndex, totalDays)
+  const monthArray = makeArrayDevidedByWeek(flattenArr)
 
 
 
