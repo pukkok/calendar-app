@@ -10,7 +10,7 @@
  * 요일 시작부분의 false 와 true값을 합쳐 달력 배열을 리턴한다.
  */
 
-const makeFlatMonthArray = (startWeekIndex : number, totalDays : number) : Array<Boolean> => {
+const makeFlatMonthArray = (startWeekIndex : number, totalDays : number) : boolean[] => {
 
   return Array(startWeekIndex + totalDays)
   .fill(false) // 요일 시작일 맞추기
