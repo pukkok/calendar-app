@@ -1,12 +1,17 @@
 import CalendarTop from "./main/CalendarTop"
 import WeekBox from "./main/WeekBox"
+import './main/styles/Main.css'
 
-const Main = () => {
+interface mainProps {
+  monthArray: number[][]
+}
+
+const Main = ({ monthArray } : mainProps) => {
 
   return (
     <main>
       <CalendarTop/>
-      <WeekBox/>
+      <WeekBox monthArray={monthArray}/>
     </main>
   )
 }

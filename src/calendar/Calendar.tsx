@@ -14,18 +14,13 @@ const Calendar = () => {
   const startWeekIndex = currentDate.startWeekIndex
   const totalDays = currentDate.totalMonthInDays
   
-  console.log(totalDays)
-  console.log(startWeekIndex)
-  
   const flattenArr = makeFlatMonthArray(startWeekIndex, totalDays)
   const monthArray = makeArrayDevidedByWeek(flattenArr)
-  console.log(monthArray)
-
 
   return (
     <section>
       <Header/>
-      <Main/>  
+      <Main monthArray={monthArray}/>  
       <Footer/>
     </section>
   )
