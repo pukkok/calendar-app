@@ -1,5 +1,13 @@
+main {
+  width: 1280px;
+}
 .week-box{
   display: flex;
+}
+
+.week-box > div{
+  flex: 1;
+  text-align: center;
 }
 
 .week-box p {
