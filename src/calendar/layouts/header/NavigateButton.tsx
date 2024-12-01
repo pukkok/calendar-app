@@ -1,6 +1,8 @@
+import './styles/NavigateButton.css'
+
 const NavigateButton = ({children, handleClick} : any) => {
 
-  return <button onClick={handleClick}>{children}</button>
+  return <button className='navigate-button' onClick={handleClick}>{children}</button>
 }
 
 export default NavigateButton

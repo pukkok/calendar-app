@@ -1,0 +1,12 @@
+.navigate-button {
+  font-size: 18px;
+  
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  
+  text-align: center;
+
+  padding: 5px 10px;
+  border: solid 1px #333;
+}
