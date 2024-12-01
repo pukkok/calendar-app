@@ -1,8 +1,8 @@
 import './styles/NavigateButton.css'
 
-const NavigateButton = ({children, handleClick} : any) => {
+const NavigateButton = ({children, handleClick, ...props} : any) => {
 
-  return <button className='navigate-button' onClick={handleClick}>{children}</button>
+  return <button className='navigate-button' onClick={handleClick} {...props} >{children}</button>
 }
 
 export default NavigateButton
