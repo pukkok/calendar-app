@@ -1,0 +1,10 @@
+.calendar-top{
+  width: 100%;
+  display: flex;
+}
+
+.calendar-top h4{
+  flex: 1;
+  text-align: center;
+  margin-bottom: 10px;
+}

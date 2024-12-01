@@ -1,6 +1,13 @@
+import week from "../../constants/week"
+import './styles/CalendarTop.css'
+
 const CalendarTop = () => {
 
-  return <div>요일 표시가 들어갈 곳</div>
+  return (
+    <div className="calendar-top">
+    {week.ko.map(item => <h4 key={item}>{item}</h4> )}
+    </div>
+  )
 }
 
 export default CalendarTop
