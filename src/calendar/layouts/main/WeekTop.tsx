@@ -1,6 +1,6 @@
-const WeekTop = () => {
+const WeekTop = ({ children } : any) => {
 
-  return <div>날짜(숫자)가 들어갈 곳</div>
+  return <p>{children}</p>
 }
 
 export default WeekTop
