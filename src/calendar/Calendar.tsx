@@ -16,7 +16,7 @@ const Calendar = () => {
   
   const flattenArr = makeFlatMonthArray(startWeekIndex, totalDays)
   const monthArray = makeArrayDevidedByWeek(flattenArr)
-
+  console.log(monthArray)
 
 
   return (
