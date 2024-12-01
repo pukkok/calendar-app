@@ -14,13 +14,14 @@ const Calendar = () => {
   const startWeekIndex = currentDate.startWeekIndex
   const totalDays = currentDate.totalMonthInDays
   
+  const currentDateFormat = currentDate.format('YYYY년 MM월 DD일') 
   const flattenArr = makeFlatMonthArray(startWeekIndex, totalDays)
   const monthArray = makeArrayDevidedByWeek(flattenArr)
 
   return (
     <section>
-      <Header/>
-      <Main monthArray={monthArray}/>  
+      <Header headline={currentDateFormat}/>
+      <Main monthArray={monthArray}/>
       <Footer/>
     </section>
   )

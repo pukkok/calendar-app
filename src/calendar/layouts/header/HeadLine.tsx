@@ -1,6 +1,6 @@
-const HeadLine = () => {
+const HeadLine = ({children} : any) => {
 
-  return <h1>title</h1>
+  return <h1>{children}</h1>
 }
 
 export default HeadLine

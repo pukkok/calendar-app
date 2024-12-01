@@ -2,7 +2,7 @@ import HeadLine from "./header/HeadLine"
 import NavigateButton from "./header/NavigateButton"
 import './header/styles/Header.css'
 
-const Header = () => {
+const Header = ({headline} : any) => {
 
   const navigateMonth = () => {
     console.log('동작 테스트')
@@ -12,7 +12,7 @@ const Header = () => {
     <NavigateButton
     handleClick = {navigateMonth}
     >◀️</NavigateButton>
-    <HeadLine/>
+    <HeadLine>{headline}</HeadLine>
     <NavigateButton
     handleClick = {navigateMonth}
     >▶️</NavigateButton>
