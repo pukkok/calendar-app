@@ -27,7 +27,7 @@ class FlexiDate extends EnhancedDate {
   }
 
   get totalMonthInDays () : number { // 총 한달간의 일수
-    return new EnhancedDate(this.year, this.month, 0).date
+    return new EnhancedDate(this.year, this.month+1, 0).date
   }
 }
 
