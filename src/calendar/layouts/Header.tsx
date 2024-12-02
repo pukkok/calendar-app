@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import HeadLine from "./header/HeadLine"
 import NavigateButton from "./header/NavigateButton"
 import './header/styles/Header.css'
@@ -13,11 +13,10 @@ const Header = ({handleNavigateMonth, headline} : headerProps) => {
 
   const navigateMonth = (e : React.MouseEvent<HTMLButtonElement>) => {
     const direction = Number(e.currentTarget.dataset.direction)
-
     handleNavigateMonth(prev => {
       let result = null
-      const {year, month, date} = prev
-      result = new FlexiDate(year, month+direction, date)
+      const { year, month } = prev
+      result = new FlexiDate(year, month+direction)
       return result
     })
   }
