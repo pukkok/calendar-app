@@ -2,10 +2,14 @@
   "name": "calendar-app",
   "version": "1.0.0",
   "main": "electron.js",
-  "repository": "https://github.com/pukkok/calendar-app.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pukkok/calendar-app.git"
+  },
   "author": "pukkok <krystalgggg@gmail.com>",
   "license": "MIT",
   "homepage": "./",
+  
   "scripts": {
     "electron-start": "wait-on http://localhost:3000 && electron .",
     "clean": "rimraf dist",
