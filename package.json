@@ -9,6 +9,7 @@
   "scripts": {
     "electron-start": "wait-on http://localhost:3000 && electron .",
     "build": "react-scripts build",
+    "electron-pack": "yarn build && electron-builder",
     "react-start": "react-scripts start",
     "start": "concurrently \"yarn react-start\" \"yarn electron-start\""
   },
