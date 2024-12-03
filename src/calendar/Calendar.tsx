@@ -12,12 +12,8 @@ const Calendar = () => {
 
   const [currentDate, setCurrentDate] = useState<FlexiDate>(today)
   
-  const startWeekIndex = currentDate.startWeekIndex
-  const totalDays = currentDate.totalMonthInDays
-  
   const currentDateFormat = currentDate.format('YYYY년 MM월') 
-  const flattenArr = makeFlatMonthArray(startWeekIndex, totalDays)
-  const monthArray = makeArrayDevidedByWeek(flattenArr)
+  const monthArray = currentDate.extractThisMonthArray()
 
   return (
     <section>
