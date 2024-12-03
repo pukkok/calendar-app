@@ -1,4 +1,6 @@
 import week from "../constants/week"
+import makeArrayDevidedByWeek from "../utils/makeArrayDevidedByWeek"
+import makeFlatMonthArray from "../utils/makeFlatMonthArray"
 import EnhancedDate from "./EnhancedDate"
 
 class FlexiDate extends EnhancedDate {
@@ -22,13 +24,21 @@ class FlexiDate extends EnhancedDate {
     return week[locale][this.day]
   }
 
-  get startWeekIndex () : number { // 시작하는 요일의 index
+  private get startWeekIndex () : number { // 시작하는 요일의 index
     return new EnhancedDate(this.year, this.month, 1).day
   }
 
-  get totalMonthInDays () : number { // 총 한달간의 일수
+  private get totalMonthInDays () : number { // 총 한달간의 일수
     return new EnhancedDate(this.year, this.month+1, 0).date
   }
+
+  extractThisMonthArray () { // 이번 달의 이차원 배열을 추출하는 함수
+    const flattenArray = makeFlatMonthArray(this.startWeekIndex, this.totalMonthInDays)
+    const result = makeArrayDevidedByWeek(flattenArray)
+    return result
+  }
+
+  // 이번 주의 배열을 추출하는 함수 만들기
 }
 
 export default FlexiDate
