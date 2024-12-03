@@ -1,0 +1,18 @@
+directories:
+  output: dist
+  buildResources: assets
+files:
+  - filter:
+      - build/**/*
+      - build/**/*
+      - electron.js
+      - node_modules/**/*
+extraMetadata:
+  main: build/electron.js
+appId: com.pukkok.calendarapp
+productName: Calendar App
+win:
+  target: nsis
+  icon: assets/icon.ico
+extends: react-cra
+electronVersion: 33.2.1
