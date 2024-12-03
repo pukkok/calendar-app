@@ -8,6 +8,7 @@
   "homepage": "./",
   "scripts": {
     "electron-start": "wait-on http://localhost:3000 && electron .",
+    "build" : "react-scripts build",
     "react-start": "react-scripts start",
     "start": "concurrently \"yarn react-start\" \"yarn electron-start\""
   },
