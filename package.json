@@ -1,15 +1,16 @@
 {
   "name": "calendar-app",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "electron.js",
   "repository": "https://github.com/pukkok/calendar-app.git",
   "author": "pukkok <krystalgggg@gmail.com>",
   "license": "MIT",
   "homepage": "./",
   "scripts": {
     "electron-start": "wait-on http://localhost:3000 && electron .",
+    "clean": "rimraf dist",
     "build": "react-scripts build",
-    "electron-pack": "yarn build && electron-builder",
+    "electron-pack": "yarn build && copy electron.js build\\ && electron-builder",
     "react-start": "react-scripts start",
     "start": "concurrently \"yarn react-start\" \"yarn electron-start\""
   },
@@ -18,7 +19,7 @@
     "productName": "Calendar App",
     "files": [
       "build/**/*",
-      "main.js",
+      "electron.js",
       "node_modules/**/*"
     ],
     "directories": {
